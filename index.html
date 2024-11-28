@@ -62,7 +62,11 @@
 					new THREE.TorusKnotGeometry( 1, 0.4, 128, 128, 1, 3 ),
 					new THREE.MeshStandardMaterial( { roughness: params.roughness, metalness: params.metalness } )
 				 );
-				scene.add( torusMesh );
+				octaMesh = new THREE.Mesh(
+					new THREE.OctahedronGeometry(),
+					new THREE.MeshStandardMaterial( { roughness: params.roughness, metalness: params.metalness })
+				);
+				scene.add( octaMesh );
 
 				camera = new THREE.PerspectiveCamera(
 					50,
