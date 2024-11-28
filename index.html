@@ -63,7 +63,7 @@
 					new THREE.MeshStandardMaterial( { roughness: params.roughness, metalness: params.metalness } )
 				 );
 				octaMesh = new THREE.Mesh(
-					new THREE.OctahedronGeometry(1.5, 3),
+					new THREE.OctahedronGeometry(1.5, 2),
 					new THREE.MeshStandardMaterial( { roughness: params.roughness, metalness: params.metalness })
 				);
 				scene.add( octaMesh );
@@ -140,6 +140,7 @@
 				if ( params.autoRotate ) {
 
 					octaMesh.rotation.y += 0.005;
+					octaMesh.rotation.x += 0.005;
 					octaMesh.rotation.z += 0.005;
 
 				}
